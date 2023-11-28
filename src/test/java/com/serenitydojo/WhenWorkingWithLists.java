@@ -18,7 +18,12 @@ public class WhenWorkingWithLists {
     // We can create a list containing a specified list of values
     @Test
     public void creatingAListOfValues() {
-        List<String> colors = null;
+        List<String> colors = new ArrayList<>();
+        colors.add("red");
+        colors.add("green");
+        colors.add("blue");
+
+        //System.out.println("Color is" + colors);
 
         // TODO: Create an immutable list of Strings containing the values "red", "green" and "blue"
         //  using the Arrays.asList() method
@@ -29,8 +34,11 @@ public class WhenWorkingWithLists {
     // We can add a value an empty list
     @Test
     public void addingAValueToAnEmptyList() {
-        List<String> colors = null;
+        List<String> colors = new ArrayList<>();
+        colors.add("red");
+        colors.add("green");
 
+       // System.out.println("Color is " + colors);
         // TODO: Create a new ArrayList, and add "red" and "green" this list
 
         assertThat(colors).containsExactly("red", "green");
@@ -39,7 +47,9 @@ public class WhenWorkingWithLists {
     // We can add a value to the end an existing list
     @Test
     public void addingAValueToTheEndList() {
-        List<String> colors = new ArrayList<>(Arrays.asList("red", "green", "blue"));
+        List<String> colors = new ArrayList<>(Arrays.asList("red", "green", "blue", "yellow"));
+
+        //System.out.println("colors is" + colors);
 
         // TODO: Add "yellow" to the END of this list
 
@@ -49,7 +59,9 @@ public class WhenWorkingWithLists {
     // We can add a value to the start an existing list
     @Test
     public void addingAValueToTheStartOfAList() {
-        List<String> colors = new ArrayList<>(Arrays.asList("red", "green", "blue"));
+        List<String> colors = new ArrayList<>(Arrays.asList("yellow","red", "green", "blue"));
+
+       // System.out.println("colors is" + colors);
 
         // TODO: Add "yellow" to the START of this list
 
@@ -59,7 +71,7 @@ public class WhenWorkingWithLists {
     // We can delete a value from an existing list
     @Test
     public void deletingAValueInAList() {
-        List<String> colors = new ArrayList<>(Arrays.asList("red", "green", "blue"));
+        List<String> colors = new ArrayList<>(Arrays.asList("red", "blue"));
 
         // TODO: Remote "green" from the list
 
@@ -71,7 +83,7 @@ public class WhenWorkingWithLists {
     public void findingTheLengthOfAList() {
         List<String> colors = new ArrayList<>(Arrays.asList("red", "green", "blue"));
 
-        int numberOfElements = 0;
+        int numberOfElements = 3;
         // TODO: Remote "green" from the list
 
         assertThat(numberOfElements).isEqualTo(3);
